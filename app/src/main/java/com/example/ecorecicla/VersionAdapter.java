@@ -39,19 +39,21 @@ public class VersionAdapter extends RecyclerView.Adapter<VersionAdapter.VersionV
     }
 
     public class VersionViewHolder extends RecyclerView.ViewHolder {
-        private final TextView codeNameText;
-        private final TextView versionText;
-        private final TextView apiLevelText;
-        private final TextView descriptionText;
+        private final TextView bill_number;
+        private final TextView user_name;
+        private final TextView address;
+        private final TextView buyer_name;
+        private final TextView vehicle_plate;
         private final LinearLayout linearLayout;
         private final RelativeLayout expandableLayout;
 
         public VersionViewHolder(@NonNull View itemView) {
             super(itemView);
-            codeNameText = itemView.findViewById(R.id.code_name);
-            versionText = itemView.findViewById(R.id.version);
-            apiLevelText = itemView.findViewById(R.id.api_level);
-            descriptionText = itemView.findViewById(R.id.description);
+            bill_number = itemView.findViewById(R.id.bill_number);
+            user_name = itemView.findViewById(R.id.user_name);
+            address = itemView.findViewById(R.id.address);
+            buyer_name = itemView.findViewById(R.id.buyer_name);
+            vehicle_plate = itemView.findViewById(R.id.vehicle_plate);
             linearLayout = itemView.findViewById(R.id.linear_layout);
             expandableLayout = itemView.findViewById(R.id.expandable_layout);
 
@@ -66,10 +68,11 @@ public class VersionAdapter extends RecyclerView.Adapter<VersionAdapter.VersionV
         }
 
         public void bind(Version version) {
-            codeNameText.setText(version.getCodeName());
-            versionText.setText(version.getVersion());
-            apiLevelText.setText(version.getApiLevel());
-            descriptionText.setText(version.getDescription());
+            bill_number.setText(version.getBill_number());
+            user_name.setText(version.getUserName());
+            address.setText(version.getAddress());
+            buyer_name.setText(version.getBuyer_name());
+            vehicle_plate.setText(version.getVehicle_plate());
             expandableLayout.setVisibility(version.isExpanded() ? View.VISIBLE : View.GONE);
         }
     }
