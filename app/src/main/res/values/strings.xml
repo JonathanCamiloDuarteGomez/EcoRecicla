@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">EcoRecicla</string>
+    <!--Pantanlla detalle de factura-->
+    <string name="header_numFactura_Dinamico">#Factura</string>
+
+    <!-- Table Headings -->
+    <string name="tablaFactura_Col1_header">Id Producto</string>
+    <string name="tablaFactura_Col2_header">Nombre</string>
+    <string name="tablaFactura_Col3_header">Kg</string>
+    <string name="tablaFactura_Col4_header">$ Valor</string>
+    <string name="tablaFactura_Col5_header">Coins</string>
+    <string name="tablaFactura_Col6_header">Total</string>
+
+
 </resources>
