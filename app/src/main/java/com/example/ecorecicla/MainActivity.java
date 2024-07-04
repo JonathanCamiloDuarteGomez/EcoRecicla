@@ -1,6 +1,8 @@
 package com.example.ecorecicla;
 
 import android.os.Bundle;
+import android.widget.FrameLayout;
+import android.widget.TableLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         initializeData();
         setupRecyclerView();
+
+
+
     }
 
     private void setupRecyclerView() {

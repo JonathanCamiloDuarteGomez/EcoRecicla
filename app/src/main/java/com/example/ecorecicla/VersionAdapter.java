@@ -1,9 +1,14 @@
 package com.example.ecorecicla;
 
 
+import static androidx.core.content.ContextCompat.startActivity;
+
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -14,7 +19,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class VersionAdapter extends RecyclerView.Adapter<VersionAdapter.VersionViewHolder> {
+
     private final List<Version> versionList;
+    protected static String nFactura = "";
+
+
 
     public VersionAdapter(List<Version> versionList) {
         this.versionList = versionList;
@@ -46,6 +55,7 @@ public class VersionAdapter extends RecyclerView.Adapter<VersionAdapter.VersionV
         private final TextView vehicle_plate;
         private final LinearLayout linearLayout;
         private final RelativeLayout expandableLayout;
+        private final Button detail_button;
 
         public VersionViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -56,6 +66,7 @@ public class VersionAdapter extends RecyclerView.Adapter<VersionAdapter.VersionV
             vehicle_plate = itemView.findViewById(R.id.vehicle_plate);
             linearLayout = itemView.findViewById(R.id.linear_layout);
             expandableLayout = itemView.findViewById(R.id.expandable_layout);
+            detail_button = itemView.findViewById(R.id.detail_button);
 
             linearLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -63,6 +74,18 @@ public class VersionAdapter extends RecyclerView.Adapter<VersionAdapter.VersionV
                     Version version = versionList.get(getAdapterPosition());
                     version.setExpanded(!version.isExpanded());
                     notifyItemChanged(getAdapterPosition());
+
+                }
+            });
+
+            // Agregar el listener para el botón
+            detail_button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Context context = v.getContext();
+                    Intent intent = new Intent(context, DetalleFactura.class);
+                    context.startActivity(intent);
+                    nFactura =  bill_number.getText().toString()  ;
                 }
             });
         }
