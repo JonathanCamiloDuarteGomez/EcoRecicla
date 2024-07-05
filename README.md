@@ -19,17 +19,18 @@ El proyecto comenzó con el planteamiento del problema para entender la situaci�
 
 Posteriormente, se llevó a cabo una planificación de sprint y se creó el backlog  con la ayuda de Jira. El objetivo de esta primera entrega es diseñar, implementar y facilitar la navegación entre las diversas funcionalidades.
 
+| **Flor de loto** | **Cronograma Sprint 1** |
+|:----------------:|:-----------------------:|
+| <img src="/assets/florLoto.png" width="400"> | <img src="/assets/jira.png" width="400"> |
 
-|                  **Flor de loto**                   |  |                  **Cronograma Sprint 1**                   |                                           
-|:--------------------------------------------------------:|:-------------------------------------------------------------:|
-| ![Flor de loto](/assets/modeloDeContexto.png) |      ![Jira](/assets/modeloDeContexto.png) |                                         
-|                  **Pantalla Historial**                   |                       **Detalle de fatura**                       |
-|:--------------------------------------------------------:|:-------------------------------------------------------------:|
-| ![XML Historial](/assets/arbolP.png) | ![XML Detalle factura](<img src="/assets/FlorLoto.png" width="800"> |
+## Ejecución.
+
+| **Pantalla Historial** | **Detalle de factura** |
+|:----------------------:|:-----------------------:|
+| <img src="/assets/historial.jpeg" width="400" height="600"> | <img src="/assets/detalle.jpeg" width="400" height="600"> |
 
 
-
-**Explicacion:**
+**Explicación:**
 Para el Historial, se diseñó una vista tipo acordeón que muestra todos los registros de ventas de material reciclable con una breve descripción. Al hacer clic en el botón de detalle, se accede a la vista de detalle de factura, donde se muestra dinámicamente la factura correspondiente a esa transacción con todos sus datos. 
 
 
